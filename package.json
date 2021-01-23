@@ -1,0 +1,18 @@
+{
+    "name": "aw_landing_website",
+    "version": "1.0.0",
+    "description": "landing website for altruist worldwide enterprise",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon ./index.js"
+    },
+    "author": "Fifanon",
+    "license": "ISC",
+    "dependencies": {
+        "bootstrap-icons": "^1.0.0-alpha5",
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.7"
+    }
+}
