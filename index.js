@@ -14,6 +14,9 @@ const port = process.env.PORT || "8000";
  *  App Configuration
  */
 app.use(express.static(path.join(__dirname, "src")));
+app.set('views', __dirname + '/src');
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 /**
  * Routes Definitions
  */
