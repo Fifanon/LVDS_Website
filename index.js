@@ -23,10 +23,12 @@ app.get('/', (req, res) => {
 app.get('/contact-us', (req, res) => {
     res.status(200).render('operations.html')
 })
-
-/**
- * Server Activation
- */
+app.get('/livres', (req, res) => {
+        res.status(200).render('livres.html')
+    })
+    /**
+     * Server Activation
+     */
 app.listen(port, () => {
     console.log('Listening to requests on http://localhost:${port}');
 });
