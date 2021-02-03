@@ -8,6 +8,8 @@ require("dotenv").config()
     /*Routes*/
 const livresRouter = require("./routes/livres")
 const livretsRouter = require("./routes/livrets")
+const displayBksRouter = require("./routes/display")
+
 
 
 
@@ -35,6 +37,8 @@ app.get('/contact-us', (req, res) => {
 });
 app.use('/livres', livresRouter);
 app.use('/livrets', livretsRouter);
+app.use('/display/', displayBksRouter);
+
 
 /**
  * Server Activation

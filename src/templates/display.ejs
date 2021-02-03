@@ -35,8 +35,8 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a>Documents</a>
                         <ul>
-                            <li><a href="livres.html">Livres</a></li>
-                            <li><a>Livrets</a></li>
+                            <li><a href="/livres">Livres</a></li>
+                            <li><a href="/livrets">Livrets</a></li>
                             <li><a>Articles</a></li>
                             <li><a>Audios</a></li>
                             <li><a>Videos</a></li>
@@ -92,7 +92,7 @@
         <br>
         <section class="section " style="padding: 0%; " id="docs ">
             <div class="line ">
-                <h2 class="text-size-50 text-center ">Livres</h2>
+                <h2 class="text-size-50 text-center ">Livrets</h2>
                 <hr class="break-small background-primary break-center ">
             </div>
         </section>
@@ -109,10 +109,10 @@
                                     <%=entry.author%>
                                 </h3>
 
-                                <div class="s-12 md-12" style="margin-bottom: 6px;width: 94%;margin-left: 3%">
-                                    <img src="<%=entry.coverImageUrl%>" style="width: 100%;" alt="">
+                                <div class="s-12 md-12" style="margin-bottom: 6px;width: 94%; margin-left: 3%; border-width: 5px; border-style: double;">
+                                    <img style="width: 100%;border-width: 5px; border-style: double; " src="<%=entry.coverImageUrl%>" alt="">
                                 </div>
-                                <a class="button button-dark-stroke text-size-14 " href="/display/livres/<%=entry.bookId%> ">Visiter</a>
+                                <a class="button button-dark-stroke text-size-14 " href="/display/livrets/">Visiter</a>
                             </div>
                         </div>
                         <%});%>
