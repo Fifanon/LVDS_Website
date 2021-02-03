@@ -58,6 +58,61 @@
         }
     },
     "livrets": {
-
+        "tavs": {
+            "title": "Le Renouvellement de l'Intelligence",
+            "author": "Jean Serge",
+            "pages": "",
+            "description": "50",
+            "coverImageUrl": "img/001.jpg"
+        },
+        "nhr": {
+            "title": "Le Renouvellement de l'Intelligence",
+            "author": "Jean Serge",
+            "pages": "",
+            "description": "50",
+            "coverImageUrl": "img/001.jpg"
+        },
+        "aer": {
+            "title": "Le Renouvellement de l'Intelligence",
+            "author": "Jean Serge",
+            "pages": "",
+            "description": "50",
+            "coverImageUrl": "img/001.jpg"
+        },
+        "nhf": {
+            "title": "Le Renouvellement de l'Intelligence",
+            "author": "Jean Serge",
+            "pages": "",
+            "description": "50",
+            "coverImageUrl": "img/001.jpg"
+        },
+        "erg": {
+            "title": "Le Renouvellement de l'Intelligence",
+            "author": "Jean Serge",
+            "pages": "",
+            "description": "50",
+            "coverImageUrl": "img/001.jpg"
+        },
+        "hgd": {
+            "title": "Le Renouvellement de l'Intelligence",
+            "author": "Jean Serge",
+            "pages": "",
+            "description": "50",
+            "coverImageUrl": "img/001.jpg"
+        },
+        "rfa": {
+            "title": "Le Renouvellement de l'Intelligence",
+            "author": "Jean Serge",
+            "pages": "",
+            "description": "50",
+            "coverImageUrl": "img/001.jpg"
+        },
+        "ds": {
+            "title": "Le Renouvellement de l'Intelligence",
+            "author": "Jean Serge",
+            "pages": "",
+            "description": "50",
+            "coverImageUrl": "img/001.jpg"
+        }
     }
 }

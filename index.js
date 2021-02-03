@@ -7,6 +7,8 @@ const firebase = require("firebase");
 require("dotenv").config()
     /*Routes*/
 const livresRouter = require("./routes/livres")
+const livretsRouter = require("./routes/livrets")
+
 
 
 /**
@@ -32,6 +34,7 @@ app.get('/contact-us', (req, res) => {
     res.status(200).render('operations.html')
 });
 app.use('/livres', livresRouter);
+app.use('/livrets', livretsRouter);
 
 /**
  * Server Activation
