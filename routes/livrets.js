@@ -12,6 +12,8 @@ router.get('/', (req, res) => {
             books[i] = Object.entries(bks)[i][1]
             books[i].bookId = Object.entries(bks)[i][0]
         }
+        console.log(books)
+
         res.status(200).render('livrets.ejs', {
             books: books
         })

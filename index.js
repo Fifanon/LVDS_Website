@@ -40,9 +40,21 @@ app.use('/livrets', livretsRouter);
 app.use('/display/', displayBksRouter);
 
 
-/**
- * Server Activation
- */
+app.use(function(req, res, next) {
+    const error = new Error('Page cannot be found');
+    error.status() = 404;
+    next(error);
+})
+
+//sending back error messages.
+//all the errors thrown with the next() ifromn the routes will be
+//handled here 
+app.use((error, req, res, next) => {
+        res.status(error.status).json({ message: error.message });
+    })
+    /**
+     * Server Activation
+     */
 app.listen(port, () => {
     console.log('Listening to requests on http://localhost:${port}');
 });

@@ -15,10 +15,9 @@ router.get('/livres/:bookId', (req, res) => {
         })
     })
 })
+
 router.get('/livrets/:bookId', (req, res) => {
-    id = req.params.bookId
-    console.log(req.params)
-    var ref = db.ref("/livrets/" + id)
+    console.log(req.body);
     ref.once("value", function(snapshot) {
         var bks = snapshot.val();
         var books = []
@@ -29,5 +28,4 @@ router.get('/livrets/:bookId', (req, res) => {
         })
     })
 })
-
 module.exports = router

@@ -32,7 +32,7 @@
             <div class="top-nav s-12 l-10">
                 <p class="nav-text"></p>
                 <ul class="right chevron">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a>Documents</a>
                         <ul>
                             <li><a href="/livres">Livres</a></li>
@@ -99,23 +99,21 @@
         <section class="section-small-padding background-white text-center ">
             <div class="line ">
                 <div class="margin ">
-                    <% books.forEach(function(entry) {%>
 
-                        <div class="s-12 m-12 l-3 margin-m-bottom ">
-                            <div class="padding-2x block-bordered ">
-                                <h3 class="text-thin " style="font-weight: bold;">
-                                    <%=entry.title%> by</h3>
-                                <h3 class="text-thin " style="font-weight: bold; color: green;">
-                                    <%=entry.author%>
-                                </h3>
+                    <div class="s-12 m-12 l-3 margin-m-bottom ">
+                        <div class="padding-2x block-bordered ">
+                            <h3 class="text-thin " style="font-weight: bold;">
+                                by</h3>
+                            <h3 class="text-thin " style="font-weight: bold; color: green;">
 
-                                <div class="s-12 md-12" style="margin-bottom: 6px;width: 94%; margin-left: 3%; border-width: 5px; border-style: double;">
-                                    <img style="width: 100%;border-width: 5px; border-style: double; " src="<%=entry.coverImageUrl%>" alt="">
-                                </div>
-                                <a class="button button-dark-stroke text-size-14 " href="/display/livrets/">Visiter</a>
+                            </h3>
+
+                            <div class="s-12 md-12" style="margin-bottom: 6px;width: 94%; margin-left: 3%; border-width: 5px; border-style: double;">
+                                <img style="width: 100%;border-width: 5px; border-style: double; " src="" alt="">
                             </div>
+                            <a class="button button-dark-stroke text-size-14 " href="/display/livrets/">Visiter</a>
                         </div>
-                        <%});%>
+                    </div>
                 </div>
 
             </div>
@@ -177,6 +175,7 @@
     <script type="text/javascript " src="js/responsee.js "></script>
     <script type="text/javascript " src="owl-carousel/owl.carousel.js "></script>
     <script type="text/javascript " src="js/template-scripts.js "></script>
+
 </body>
 
 </html>

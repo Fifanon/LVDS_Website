@@ -32,7 +32,7 @@
             <div class="top-nav s-12 l-10">
                 <p class="nav-text"></p>
                 <ul class="right chevron">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a>Documents</a>
                         <ul>
                             <li><a href="/livres">Livres</a></li>
@@ -112,7 +112,7 @@
                                 <div class="s-12 md-12" style="margin-bottom: 6px;width: 94%; margin-left: 3%; border-width: 5px; border-style: double;">
                                     <img style="width: 100%;border-width: 5px; border-style: double; " src="<%=entry.coverImageUrl%>" alt="">
                                 </div>
-                                <a class="button button-dark-stroke text-size-14 " href="/display/livrets/<%=entry.bookId%> ">Visiter</a>
+                                <a class="button button-dark-stroke text-size-14 " href="/<%=entry.bookId%> ">Visiter</a>
                             </div>
                         </div>
                         <%});%>
@@ -177,6 +177,24 @@
     <script type="text/javascript " src="js/responsee.js "></script>
     <script type="text/javascript " src="owl-carousel/owl.carousel.js "></script>
     <script type="text/javascript " src="js/template-scripts.js "></script>
+    <script>
+        link = document.getElementById("aaa").getAttribute("href");
+        async function postData(url = '', data = {
+            link
+        }) {
+
+            const response = await fetch('/display/livrets/' + link, {
+                method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                mode: 'cors',
+                credentials: 'same-origin',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+            return response.json();
+        }
+    </script>
 </body>
 
 </html>

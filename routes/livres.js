@@ -11,6 +11,7 @@ router.get('/', (req, res) => {
         for (var i = 0; i < Object.entries(bks).length; i++) {
             books[i] = Object.entries(bks)[i][1]
         }
+        console.log(books)
         res.status(200).render('livres.ejs', {
             books: books
         })
