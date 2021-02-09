@@ -8,7 +8,7 @@ router.post('/livre', (req, res) => {
     var ref = db.ref("/livres/" + id);
     ref.once("value", function(snapshot) {
         var bk = snapshot.val();
-        console.log(bk);
+        bk.category = "Livre"
         res.status(200).render('display.ejs', {
             book: bk
         });
@@ -20,7 +20,8 @@ router.post('/livret', (req, res) => {
     var ref = db.ref("/livrets/" + id);
     ref.once("value", function(snapshot) {
         var bk = snapshot.val();
-        console.log(bk);
+        bk.category = "Livret"
+
         res.status(200).render('display.ejs', {
             book: bk
         });

@@ -1,57 +1,57 @@
 {
     "livres": {
         "tavs": {
-            "title": "Travaillez à Votre Salut",
-            "author": "Jean Serge",
+            "title": "The Story of The Bible",
+            "author": "Unknown",
             "pages": "54",
             "description": "121",
-            "coverImageUrl": "img/tavs"
+            "coverImageUrl": "img/thestorybible.jpg"
         },
         "thes": {
-            "title": "Preparez l'Epouse de l'Agneau",
-            "author": "Jean Serge",
+            "title": "The Story of The Bible",
+            "author": "Unknown",
             "pages": "50",
             "description": "54",
             "coverImageUrl": "img/thestorybible.jpg"
         },
         "gsd": {
-            "title": "Preparez l'Epouse de l'Agneau",
-            "author": "Jean Serge",
+            "title": "The Story of The Bible",
+            "author": "Unknown",
             "pages": "50",
             "description": "54",
             "coverImageUrl": "img/thestorybible.jpg"
         },
         "sdfsd": {
-            "title": "Preparez l'Epouse de l'Agneau",
-            "author": "Jean Serge",
+            "title": "The Story of The Bible",
+            "author": "Unknown",
             "pages": "50",
             "description": "54",
             "coverImageUrl": "img/thestorybible.jpg"
         },
         "asd": {
-            "title": "Preparez l'Epouse de l'Agneau",
-            "author": "Jean Serge",
+            "title": "The Story of The Bible",
+            "author": "Unknown",
             "pages": "50",
             "description": "54",
             "coverImageUrl": "img/thestorybible.jpg"
         },
         "adee": {
-            "title": "Preparez l'Epouse de l'Agneau",
-            "author": "Jean Serge",
+            "title": "The Story of The Bible",
+            "author": "Unknown",
             "pages": "50",
             "description": "54",
             "coverImageUrl": "img/thestorybible.jpg"
         },
         "rre": {
-            "title": "Preparez l'Epouse de l'Agneau",
-            "author": "Jean Serge",
+            "title": "The Story of The Bible",
+            "author": "Unknown",
             "pages": "50",
             "description": "54",
             "coverImageUrl": "img/thestorybible.jpg"
         },
         "op": {
-            "title": "Preparez l'Epouse de l'Agneau",
-            "author": "Jean Serge",
+            "title": "The Story of The Bible",
+            "author": "Unknown",
             "pages": "50",
             "description": "54",
             "coverImageUrl": "img/thestorybible.jpg"
