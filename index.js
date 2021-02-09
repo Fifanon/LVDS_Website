@@ -44,18 +44,7 @@ app.get('/contact-us', (req, res) => {
 app.use('/livres', livresRouter);
 app.use('/livrets', livretsRouter);
 
-app.post('/afficher/livret', (req, res) => {
-    console.log(req)
-    id = req.body.bookId;
-    var ref = db.ref("/livrets/" + id);
-    ref.once("value", function(snapshot) {
-        var bk = snapshot.val();
-        console.log(bk);
-        res.status(200).render('display.ejs', {
-            book: bk
-        });
-    });
-});
+app.use('/afficher', displayRouter);
 
 /**
  * Server Activation
