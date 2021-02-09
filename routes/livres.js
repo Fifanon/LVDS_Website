@@ -9,9 +9,10 @@ router.get('/', (req, res) => {
         var bks = snapshot.val();
         var books = []
         for (var i = 0; i < Object.entries(bks).length; i++) {
-            books[i] = Object.entries(bks)[i][1]
+            books[i] = Object.entries(bks)[i][1];
+            books[i].bookId = Object.entries(bks)[i][0];
+
         }
-        console.log(books)
         res.status(200).render('livres.ejs', {
             books: books
         })

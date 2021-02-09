@@ -3,12 +3,11 @@
  */
 const express = require('express')
 const path = require("path");
+const db = require('./config/firebase-config');
+
 const firebase = require("firebase");
+var bodyParser = require('body-parser')
 require("dotenv").config()
-    /*Routes*/
-const livresRouter = require("./routes/livres")
-const livretsRouter = require("./routes/livrets")
-const displayBksRouter = require("./routes/display")
 
 
 
@@ -22,13 +21,20 @@ const port = process.env.PORT || "8000";
 /**
  *  App Configuration
  */
-app.use(express.static(path.join(__dirname, "src")));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(express.static(path.join('src')));
 app.set('views', __dirname + '/src/templates');
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
-/**
- * Routes Definitions
- */
+
+/*Routes*/
+const displayRouter = require("./routes/display")
+const livresRouter = require("./routes/livres")
+const livretsRouter = require("./routes/livrets")
+    /**
+     * Routes Definitions
+     */
 app.get('/', (req, res) => {
     res.status(200).render('index.html')
 });
@@ -37,24 +43,23 @@ app.get('/contact-us', (req, res) => {
 });
 app.use('/livres', livresRouter);
 app.use('/livrets', livretsRouter);
-app.use('/display/', displayBksRouter);
 
+app.post('/afficher/livret', (req, res) => {
+    console.log(req)
+    id = req.body.bookId;
+    var ref = db.ref("/livrets/" + id);
+    ref.once("value", function(snapshot) {
+        var bk = snapshot.val();
+        console.log(bk);
+        res.status(200).render('display.ejs', {
+            book: bk
+        });
+    });
+});
 
-app.use(function(req, res, next) {
-    const error = new Error('Page cannot be found');
-    error.status() = 404;
-    next(error);
-})
-
-//sending back error messages.
-//all the errors thrown with the next() ifromn the routes will be
-//handled here 
-app.use((error, req, res, next) => {
-        res.status(error.status).json({ message: error.message });
-    })
-    /**
-     * Server Activation
-     */
+/**
+ * Server Activation
+ */
 app.listen(port, () => {
     console.log('Listening to requests on http://localhost:${port}');
 });

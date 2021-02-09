@@ -3,29 +3,27 @@ const db = require('../config/firebase-config');
 
 const router = express.Router()
 
-router.get('/livres/:bookId', (req, res) => {
-    id = req.params.bookId
-    var ref = db.ref("/livres/" + id)
+router.post('/livre', (req, res) => {
+    id = req.body.bookId;
+    var ref = db.ref("/livres/" + id);
     ref.once("value", function(snapshot) {
-        var bks = snapshot.val();
-        console.log(Object.entries(bks))
+        var bk = snapshot.val();
+        console.log(bk);
+        res.status(200).send('display.ejs', {
+            book: bk
+        });
+    });
+});
 
-        res.status(200).render('display.ejs', {
-            books: books
-        })
-    })
-})
-
-router.get('/livrets/:bookId', (req, res) => {
-    console.log(req.body);
+router.post('/livret', (req, res) => {
+    id = req.body.bookId;
+    var ref = db.ref("/livrets/" + id);
     ref.once("value", function(snapshot) {
-        var bks = snapshot.val();
-        var books = []
-        books[0] = bks
-        console.log(books)
+        var bk = snapshot.val();
+        console.log(bk);
         res.status(200).render('display.ejs', {
-            books: books
-        })
-    })
-})
-module.exports = router
+            book: bk
+        });
+    });
+});
+module.exports = router;

@@ -103,16 +103,21 @@
 
                         <div class="s-12 m-12 l-3 margin-m-bottom ">
                             <div class="padding-2x block-bordered ">
-                                <h3 class="text-thin " style="font-weight: bold;">
-                                    <%=entry.title%> by</h3>
+                                <h3 class="text-thiszn " style="font-weight: bold;">
+                                    <%=entry.title%>
+                                </h3>
                                 <h3 class="text-thin " style="font-weight: bold; color: green;">
+                                    par
                                     <%=entry.author%>
                                 </h3>
 
                                 <div class="s-12 md-12" style="margin-bottom: 6px;width: 94%; margin-left: 3%; border-width: 5px; border-style: double;">
                                     <img style="width: 100%;border-width: 5px; border-style: double; " src="<%=entry.coverImageUrl%>" alt="">
                                 </div>
-                                <a class="button button-dark-stroke text-size-14 " href="/<%=entry.bookId%> ">Visiter</a>
+                                <form action="/afficher/livret" method="POST">
+                                    <input type="hidden" value="<%=entry.bookId%>" name="bookId">
+                                    <button class="button button-dark-stroke text-size-14 " type="submit" value="OK">Visiter</button>
+                                </form>
                             </div>
                         </div>
                         <%});%>

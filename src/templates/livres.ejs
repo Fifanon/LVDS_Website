@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/template-style.css">
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <link rel="icon" href="img/lcroix.jpg">
@@ -104,15 +105,20 @@
                         <div class="s-12 m-12 l-3 margin-m-bottom ">
                             <div class="padding-2x block-bordered ">
                                 <h3 class="text-thin " style="font-weight: bold;">
-                                    <%=entry.title%> by</h3>
+                                    <%=entry.title%>
+                                </h3>
                                 <h3 class="text-thin " style="font-weight: bold; color: green;">
+                                    par
                                     <%=entry.author%>
                                 </h3>
 
                                 <div class="s-12 md-12" style="margin-bottom: 6px;width: 94%;margin-left: 3%">
                                     <img src=<%=entry.coverImageUrl%> style="width: 100%;" alt="">
                                 </div>
-                                <a class="button button-dark-stroke text-size-14 " href="/display/livres/<%=entry.bookId%> ">Visiter</a>
+                                <form action="/afficher/livre" method="POST">
+                                    <input type="hidden" value="<%=entry.bookId%>" name="bookId">
+                                    <button class="button button-dark-stroke text-size-14 " type="submit" value="OK">Visiter</button>
+                                </form>
                             </div>
                         </div>
                         <%});%>
@@ -177,6 +183,7 @@
     <script type="text/javascript " src="js/responsee.js "></script>
     <script type="text/javascript " src="owl-carousel/owl.carousel.js "></script>
     <script type="text/javascript " src="js/template-scripts.js "></script>
+
 </body>
 
 </html>

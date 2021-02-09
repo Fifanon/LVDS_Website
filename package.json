@@ -9,6 +9,7 @@
     "author": "Fifanon",
     "license": "ISC",
     "dependencies": {
+        "body-parser": "^1.19.0",
         "bootstrap-icons": "^1.0.0-alpha5",
         "dotenv": "^8.2.0",
         "ejs": "^3.1.5",
