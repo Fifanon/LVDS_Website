@@ -4,7 +4,6 @@
 <%-include('partials/header')%>
 
     <body class="size-1140">
-        <!-- PREMIUM FEATURES BUTTON -->
         <!-- HEADER -->
         <header role="banner" class="position-absolute">
             <!-- Top Navigation -->
@@ -87,15 +86,29 @@
                             <h3 class="text-thiszn " style="font-weight: bold; font-size: x-large;">
                                 <%=book.title%>
                             </h3>
-                            <h3 class="text-thin " style="font-weight: bold; color: green;">
-                                par
-                                <%=book.author%>
-                            </h3>
+
                             <p>
-                                Page :
+                                <mark style="background-color: white;padding-left: 0%;">Auteur:
+                                <mark style="color: green;background-color: white; font-weight: bold;">
+                                <%=book.author%>
+                                </mark>
+                                </mark> <br> Page :
                                 <%=book.pages%>
                             </p>
+                            <div class="s-6 m-6 l-6 margin-m-bottom " style="text-align: left;">
 
+                                <form action="/afficher" method="POST">
+                                    <input type="hidden" value="<%=book.bookId%>" name="bookId">
+                                    <button class="button button text-size-22 " type="submit" value="OK" style="background-color: dodgerblue;">Read Online</button>
+                                </form>
+                            </div>
+                            <div class="s-6 m-6 l-6 margin-m-bottom " style="text-align: left;">
+
+                                <form action="/afficher" method="POST">
+                                    <input type="hidden" value="<%=book.bookId%>" name="bookId">
+                                    <button class="button button text-size-36 " type="submit" value="OK" style="background-color: red;">Download</button>
+                                </form>
+                            </div>
                         </div>
 
                     </div>

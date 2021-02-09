@@ -8,9 +8,14 @@ router.post('/livre', (req, res) => {
     var ref = db.ref("/livres/" + id);
     ref.once("value", function(snapshot) {
         var bk = snapshot.val();
-        console.log(bk);
+        var book = []
+        for (var i = 0; i < Object.entries(bk).length; i++) {
+            book = [i] = Object.entries(bk)[i][1];
+            book[i].bookId = Object.entries(bk)[i][0];
+
+        };
         res.status(200).send('display.ejs', {
-            book: bk
+            book: book
         });
     });
 });
