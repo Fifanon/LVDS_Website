@@ -44,7 +44,7 @@ app.get('/contact-us', (req, res) => {
 });
 app.use('/livres', livresRouter);
 app.use('/livrets', livretsRouter);
-app.use('/livrets', articlesRouter);
+app.use('/articles', articlesRouter);
 
 
 app.use('/afficher', displayRouter);

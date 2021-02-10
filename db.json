@@ -114,5 +114,63 @@
             "description": "50",
             "coverImageUrl": "img/0001.jpg"
         }
+    },
+    "articles": {
+        "tavsfa": {
+            "title": "l'histoire de la destruction de Jérusalem 1",
+            "author": "Dr Jean Serge",
+            "pages": "54",
+            "description": "50",
+            "coverImageUrl": "img/lrdli.png"
+        },
+        "nhrjws": {
+            "title": "l'histoire de la destruction de Jérusalem 1",
+            "author": "Dr Jean Serge",
+            "pages": "54",
+            "description": "50",
+            "coverImageUrl": "img/lrdli.png"
+        },
+        "aerioa": {
+            "title": "l'histoire de la destruction de Jérusalem 1",
+            "author": "Dr Jean Serge",
+            "pages": "54",
+            "description": "50",
+            "coverImageUrl": "img/lrdli.png"
+        },
+        "nhfioqe": {
+            "title": "l'histoire de la destruction de Jérusalem 1",
+            "author": "Dr Jean Serge",
+            "pages": "54",
+            "description": "50",
+            "coverImageUrl": "img/lrdli.png"
+        },
+        "ergfio": {
+            "title": "l'histoire de la destruction de Jérusalem 1",
+            "author": "Dr Jean Serge",
+            "pages": "54",
+            "description": "50",
+            "coverImageUrl": "img/lrdli.png"
+        },
+        "hgdfa": {
+            "title": "l'histoire de la destruction de Jérusalem 1",
+            "author": "Dr Jean Serge",
+            "pages": "54",
+            "description": "50",
+            "coverImageUrl": "img/lrdli.png"
+        },
+        "reiowfa": {
+            "title": "l'histoire de la destruction de Jérusalem 1",
+            "author": "Dr Jean Serge",
+            "pages": "54",
+            "description": "50",
+            "coverImageUrl": "img/lrdli.png"
+        },
+        "fassaf": {
+            "title": "l'histoire de la destruction de Jérusalem 1",
+            "author": "Dr Jean Serge",
+            "pages": "54",
+            "description": "50",
+            "coverImageUrl": "img/lrdli.png"
+        }
     }
 }
