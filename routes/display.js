@@ -27,4 +27,15 @@ router.post('/livret', (req, res) => {
         });
     });
 });
+router.post('/article', (req, res) => {
+    id = req.body.bookId;
+    var ref = db.ref("/articles/" + id);
+    ref.once("value", function(snapshot) {
+        var bk = snapshot.val();
+        bk.category = "Livre"
+        res.status(200).render('display.ejs', {
+            book: bk
+        });
+    });
+});
 module.exports = router;
