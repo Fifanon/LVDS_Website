@@ -1,7 +1,7 @@
 {
-    "name": "aw_landing_website",
+    "name": "",
     "version": "1.0.0",
-    "description": "landing website for altruist worldwide enterprise",
+    "description": "",
     "main": "index.js",
     "scripts": {
         "dev": "nodemon ./index.js"
