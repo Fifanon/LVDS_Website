@@ -32,6 +32,7 @@ app.set('view engine', 'html');
 const displayRouter = require("./routes/display")
 const livresRouter = require("./routes/livres")
 const livretsRouter = require("./routes/livrets")
+const articlesRouter = require("./routes/articles")
     /**
      * Routes Definitions
      */
@@ -43,6 +44,8 @@ app.get('/contact-us', (req, res) => {
 });
 app.use('/livres', livresRouter);
 app.use('/livrets', livretsRouter);
+app.use('/livrets', articlesRouter);
+
 
 app.use('/afficher', displayRouter);
 
