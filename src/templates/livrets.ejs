@@ -13,10 +13,16 @@
     <link rel="stylesheet" href="css/template-style.css">
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <link rel="icon" href="img/lcroix.jpg">
-
+    <style>
+        .fa {
+            font-size: 16px;
+            margin-right: 1%;
+        }
+    </style>
 </head>
 
 <body class="size-1140">
@@ -116,7 +122,7 @@
                                 </div>
                                 <form action="/afficher/livret" method="POST">
                                     <input type="hidden" value="<%=entry.bookId%>" name="bookId">
-                                    <button class="button button-dark-stroke text-size-14 " type="submit" value="OK">Visiter</button>
+                                    <button class="button button-dark-stroke text-size-14 " type="submit" value="OK">Ouvrir</button>
                                 </form>
                             </div>
                         </div>
@@ -138,7 +144,7 @@
             <!-- Map -->
             <!-- Collumn 2 -->
 
-            <div style="width: 20%; margin-left: 38.5%;height: 4em; margin-top: 1.5em;">
+            <div style="width: 20%; margin-left: 38.5%;height: 4em; margin-top: 1.5em; padding-left: 8%;">
                 <br>
                 <a href="#" class="fa fa-facebook"></a>
                 <a href="#" class="fa fa-instagram"></a>
@@ -154,24 +160,6 @@
     <script type="text/javascript " src="js/responsee.js "></script>
     <script type="text/javascript " src="owl-carousel/owl.carousel.js "></script>
     <script type="text/javascript " src="js/template-scripts.js "></script>
-    <script>
-        link = document.getElementById("aaa").getAttribute("href");
-        async function postData(url = '', data = {
-            link
-        }) {
-
-            const response = await fetch('/display/livrets/' + link, {
-                method: 'POST', // *GET, POST, PUT, DELETE, etc.
-                mode: 'cors',
-                credentials: 'same-origin',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
-            return response.json();
-        }
-    </script>
 </body>
 
 </html>
